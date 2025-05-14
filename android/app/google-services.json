@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "317962164570",
+    "project_id": "my-frist-app-6c49a",
+    "storage_bucket": "my-frist-app-6c49a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317962164570:android:55e1d45e63b3ef5a9c3b63",
+        "android_client_info": {
+          "package_name": "com.example.mti"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYTkHgb5lw1i2RYerFKXHXkhUL6snobM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
