@@ -101,7 +101,6 @@ class _SignInScreenState extends State<SignInScreen> {
               const SizedBox(height: 12),
               TextFormField(
                 controller: _passwordController,
-              
                 obscureText: _isPasswordVisible ? false : true,
                 decoration: InputDecoration(
                   enabledBorder: InputBorder.none,
@@ -111,7 +110,6 @@ class _SignInScreenState extends State<SignInScreen> {
                     borderRadius: BorderRadius.circular(2),
                   ),
                   hintText: '**********',
-                
                   contentPadding:
                       const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
                   hintStyle: const TextStyle(
