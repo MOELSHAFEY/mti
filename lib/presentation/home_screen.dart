@@ -34,8 +34,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         );
                       },
-                      canRequestFocus: false,
-                      enableFeedback: false,
                       borderRadius: BorderRadius.circular(0),
                       child: Container(
                         alignment: Alignment.center,
@@ -55,8 +53,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     width: 10,
                   ),
                   InkWell(
-                      canRequestFocus: false,
-                      enableFeedback: false,
                       borderRadius: BorderRadius.circular(0),
                       child: Container(
                         alignment: Alignment.center,
