@@ -35,7 +35,9 @@ class _SignInScreenState extends State<SignInScreen> {
       child: BlocConsumer<SignInCubit, SignInState>(
         listener: (context, state) {
           if (state is SuccessSignin) {
-            print("done login");
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+              content: Text("Signed in successfully"),
+            ));
             Navigator.pushReplacement(
               context,
               MaterialPageRoute(
@@ -43,7 +45,9 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
             );
           } else if (state is ErrorSignin) {
-            print(state.message);
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              content: Text(state.message),
+            ));
           }
         },
         builder: (context, state) {
@@ -139,8 +143,9 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                     const SizedBox(height: 32),
                     InkWell(
-                      onTap: (){
-                        context.read<SignInCubit>().submitForm(_emailController.text, _passwordController.text);
+                      onTap: () {
+                        context.read<SignInCubit>().submitForm(
+                            _emailController.text, _passwordController.text);
                       },
                       canRequestFocus: false,
                       enableFeedback: false,

@@ -9,7 +9,6 @@ class SignUpCubit extends Cubit<SignUpState> {
 
   Future<void> submitForm(String email, String password) async {
     emit(Loading());
-    // Simulate API call
     try {
       await FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: email, password: password);

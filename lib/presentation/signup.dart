@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mti/presentation/sign_in.dart';
 
 import '../logic/sign_up/sign_up_cubit.dart';
-import 'home_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -31,15 +30,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
       child: BlocConsumer<SignUpCubit, SignUpState>(
         listener: (context, state) {
           if (state is SuccessSignup) {
-            print("done login");
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                builder: (BuildContext context) => const HomeScreen(),
-              ),
-            );
+            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+              content: Text("Account created successfully"),
+            ));
           } else if (state is ErrorSignup) {
-            print(state.message);
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              content: Text(state.message),
+            ));
           }
         },
         builder: (context, state) {
