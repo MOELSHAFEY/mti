@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'presentation/sign_in.dart';
 
 void main() async {
-  await WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const SignupApp());
 }

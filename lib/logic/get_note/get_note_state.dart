@@ -12,7 +12,7 @@ class GetNoteSuc extends GetNoteInitial {
 
 class GetNoteError extends GetNoteInitial {
   final String message;
-  GetNoteError(this.message);
+  GetNoteError( {required String this.message});
 }
 
 class Loading extends GetNoteInitial {}

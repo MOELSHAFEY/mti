@@ -13,9 +13,10 @@ class GetNoteCubit extends Cubit<GetNoteState> {
     try {
       final date = await FirebaseFirestore.instance.collection("notes").get();
       final notes = date.docs.map((e) => NoteModel.fromJson(e.data())).toList();
+      print(notes.first.headline);
       emit(GetNoteSuc(notes: notes));
     } catch (e) {
-      emit(GetNoteError(e.toString()));
+      emit(GetNoteError( message:e.toString()));
     }
   }
 }
